@@ -32,7 +32,7 @@ src/views - web pages
 
 Installation:
 
-Clone the following repository:
+Clone the following repository: https://github.com/Frostyy890/wt-cw2-00016334
 
 Install dependencies using: pnpm install.
 Create a .env file in the project root and configure any necessary environment variables (e.g., port connection details).
