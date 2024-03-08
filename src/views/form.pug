@@ -1,0 +1,18 @@
+extends layout
+block content
+    script(src="/scripts/form-handler/index.js") 
+    .d-flex.justify-content-center.align-items-center.h-100
+        form#edit-form.bg-body-tertiary.p-4.rounded.shadow.d-flex.flex-column.justify-content-between
+            .form-group.mb-3
+                label(for="name") Name
+                input.form-control(type="text" id="name" required name="name" value=product ? product.name : "")
+            .form-group.mb-3
+                label(for="imageURL") Image URL
+                input.form-control(type="url" id="imgURL" required name="imgURL" value=product ? product.imgURL : "")
+            .form-group.mb-3
+                label(for="price") Price
+                input.form-control(type="number" id="price" required name="price" value=product ? product.price : "")
+            .form-group.mb-3
+                label(for="description") Description
+                textarea.form-control(id="description" required name="description" rows="5")=product ? product.description : ""
+            button.btn.btn-primary(type="submit")=product ? "Update" : "Create"

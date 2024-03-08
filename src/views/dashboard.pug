@@ -1,0 +1,25 @@
+extends layout
+block content
+    script(src="/scripts/products-handler/index.js") 
+    .text-center
+        unless products
+            h4 Server is not responding
+        else
+            p.h4.text-dark-emphasis Admin Dashboard
+            span.text-dark-emphasis Add, delete and edit your products 
+    br
+    .container-xxl.text-center.card-grid
+        .card.card-grid-item
+            .card-body.d-flex.justify-content-center.align-items-center.flex-column.gap-2
+                a(type="button" href="/create").btn.btn-primary &plus; Add new 
+                p Click here to add new product
+        each product in products
+            .card.card-grid__item
+                img(alt="..." src=product.imgURL).card-img-top
+                .card-body
+                    p(href="/item/"+product.id).card-title.product.link-offset-1 #{product.name}
+                    .card-subtitle.mt-1.mb-2.text-body-secondary &dollar;#{product.price}
+                    .card-text.mb-2 #{product.description}
+                    .d-flex.justify-content-between.gap-5
+                        a(href="/edit/"+product.id).btn.btn-primary.cart-btn.w-100.edit-btn Edit
+                        button.btn.btn-danger.w-100.btn-delete Delete

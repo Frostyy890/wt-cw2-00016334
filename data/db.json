@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": 1234567890123,
+      "name": "Apple watch",
+      "imgURL": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MTFA3ref_VW_34FR+watch-case-44-aluminum-silver-cell-se_VW_34FR+watch-face-44-aluminum-silver-se_VW_34FR?wid=2000&hei=2000&fmt=png-alpha&.v=1694507496485",
+      "price": 150.99,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "stockQuantity": 0
+    },
+    {
+      "id": 9731947981723,
+      "name": "Asus Rog Strix Laptop",
+      "imgURL": "https://dlcdnwebimgs.asus.com/gain/4996F0D8-D694-4FB0-911A-FCC314B6D29C/w717/h525/w273",
+      "price": 1350.68,
+      "description": "Asus Rog series is now featuring new cutting edge laptop",
+      "stockQuantity": 3
+    }
+  ]
+}
