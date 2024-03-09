@@ -41,3 +41,4 @@ Running the Application:
 Start the development server using: pnpm dev. This will launch the application using Nodemon and automatically restart upon file changes.
 
 You can access the deployed version of the website using the following link:
+http://ec2-16-170-206-132.eu-north-1.compute.amazonaws.com:3000/
