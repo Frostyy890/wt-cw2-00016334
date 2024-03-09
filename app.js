@@ -23,7 +23,7 @@ app.use(express.static("public", { mimetype: "text/css" }));
 // Setting up cors to allow requests from any origin
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:3000/",
   })
 );
 app.options("*", cors());
