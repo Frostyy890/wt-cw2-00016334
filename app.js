@@ -6,6 +6,7 @@ import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import { webRouter } from "./src/routes/web/index.js";
 import { apiRouter } from "./src/routes/api/index.js";
+import cors from "cors";
 
 // Config
 dotenv.config();
@@ -19,6 +20,13 @@ global.db = path.join(__dirname, "./data/db.json");
 app.set("views", path.join(__dirname, "src", "views"));
 app.set("view engine", "pug");
 app.use(express.static("public", { mimetype: "text/css" }));
+// Setting up cors to allow requests from any origin
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+app.options("*", cors());
 
 // API routes
 app.use("/api", apiRouter);
